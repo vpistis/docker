@@ -1,6 +1,6 @@
 FROM python:3.5-slim
 
-MAINTAINER Valentino Pistis vale.pistis@gmail.com
+MAINTAINER Valentino Pistis <vale.pistis@gmail.com>
 
 RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_8.0/ /' >> /etc/apt/sources.list.d/fish.list 
 RUN apt-get update && apt-get install -y fish vim --no-install-recommends --force-yes

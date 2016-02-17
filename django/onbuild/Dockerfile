@@ -1,6 +1,6 @@
 FROM python:3.5
 
-MAINTAINER Valentino Pistis vale.pistis@gmail.com
+MAINTAINER Valentino Pistis <vale.pistis@gmail.com>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
