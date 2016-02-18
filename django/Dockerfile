@@ -2,9 +2,12 @@ FROM python:3.5-slim
 
 MAINTAINER Valentino Pistis <vale.pistis@gmail.com>
 
+# Django Rest Framework
+# http://www.django-rest-framework.org
+
 RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_8.0/ /' >> /etc/apt/sources.list.d/fish.list 
 RUN apt-get update && apt-get install -y fish vim --no-install-recommends --force-yes
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
 		gcc \
 		apache2 \
 		nginx \
@@ -14,5 +17,5 @@ RUN apt-get update && apt-get install -y \
 
 ENV DJANGO_VERSION 1.9.2
 
-RUN pip install psycopg2 django=="$DJANGO_VERSION" gunicorn uwsgi
+RUN pip install psycopg2 django=="$DJANGO_VERSION" gunicorn uwsgi djangorestframework markdown django-filter
 
